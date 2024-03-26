@@ -30,3 +30,6 @@ nnoremap('U', '<C-r>')
 nnoremap('<leader>o', function()
   require('oil').toggle_float()
 end)
+
+-- Themery
+nnoremap('<leader>ts', '<cmd>Themery<cr>')
