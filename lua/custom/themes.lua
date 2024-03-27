@@ -12,6 +12,7 @@ return {
       -- This block will be replaced by Themery.
       vim.cmd 'colorscheme catppuccin-mocha'
       vim.g.theme_id = 4
+      vim.o.termguicolors = true
       -- end themery block
 
       vim.keymap.set('n', '<leader>ts', '<cmd>Themery<cr>', { noremap = true, desc = '[T]heme [S]witcher' })
@@ -22,6 +23,7 @@ return {
     priority = 1000,
     config = function()
       require('catppuccin').setup {
+        transparent_background = true,
         integrations = {
           cmp = true,
           telescope = {
@@ -32,7 +34,9 @@ return {
             enabled = true,
           },
           neotree = true,
+          treesitter = true,
         },
+        term_colors = true,
       }
     end,
   },
