@@ -1,11 +1,9 @@
 local nnoremap = require('custom.keymaps_utils').nnoremap
 local vnoremap = require('custom.keymaps_utils').vnoremap
+nnoremap('ø', '')
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
-
--- Quit with leader
-nnoremap('<leader>q', '<cmd>q<cr>', { silent = false })
 
 -- Switch 'j' and 'k'
 nnoremap('j', 'k')
@@ -28,3 +26,11 @@ nnoremap('U', '<C-r>')
 
 -- Open terminal
 nnoremap('', '<cmd>split | terminal<cr>')
+
+-- Buffer management
+nnoremap('<leader>h', '<cmd>bprev<cr>', { desc = 'Previous buffer' })
+nnoremap('<leader>l', '<cmd>bnext<cr>', { desc = 'Next buffer' })
+nnoremap('<leader>q', '<cmd>bd<cr>', { silent = false, desc = 'Close current buffer' })
+
+-- One hand fast travel
+nnoremap('ø', '{')
