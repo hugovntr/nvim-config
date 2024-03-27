@@ -25,3 +25,6 @@ vnoremap('H', '^')
 
 -- 'U' to redo
 nnoremap('U', '<C-r>')
+
+-- Open terminal
+nnoremap('', '<cmd>split | terminal<cr>')
