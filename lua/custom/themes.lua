@@ -9,10 +9,10 @@ return {
     config = function(_, opts)
       require('themery').setup(opts)
       -- Themery block
--- This block will be replaced by Themery.
-vim.cmd("colorscheme catppuccin-mocha")
-vim.g.theme_id = 4
--- end themery block
+      -- This block will be replaced by Themery.
+      vim.cmd 'colorscheme catppuccin-mocha'
+      vim.g.theme_id = 4
+      -- end themery block
     end,
   },
   {
@@ -29,6 +29,7 @@ vim.g.theme_id = 4
           native_lsp = {
             enabled = true,
           },
+          neotree = true,
         },
       }
     end,
