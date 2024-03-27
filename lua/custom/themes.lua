@@ -13,6 +13,8 @@ return {
       vim.cmd 'colorscheme catppuccin-mocha'
       vim.g.theme_id = 4
       -- end themery block
+
+      vim.keymap.set('n', '<leader>ts', '<cmd>Themery<cr>', { noremap = true, desc = '[T]heme [S]witcher' })
     end,
   },
   {

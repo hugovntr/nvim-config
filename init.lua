@@ -158,6 +158,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 
+vim.opt.hidden = false
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 

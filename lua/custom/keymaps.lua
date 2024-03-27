@@ -25,11 +25,3 @@ vnoremap('H', '^')
 
 -- 'U' to redo
 nnoremap('U', '<C-r>')
-
--- Open OIL
-nnoremap('<leader>o', function()
-  require('oil').toggle_float()
-end)
-
--- Themery
-nnoremap('<leader>ts', '<cmd>Themery<cr>')
