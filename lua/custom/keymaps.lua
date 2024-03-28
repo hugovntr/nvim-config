@@ -33,4 +33,5 @@ nnoremap('<PageDown>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
 nnoremap('<leader>q', '<cmd>bd<cr>', { silent = false, desc = 'Close current buffer' })
 
 -- One hand fast travel
-nnoremap('ø', '{')
+nnoremap('È', '}') -- down
+nnoremap('Ï', '{') -- up
