@@ -12,8 +12,8 @@ nnoremap('k', 'j')
 vnoremap('k', 'j')
 
 -- Switch 'i' and 'a'
-nnoremap('i', 'a')
-nnoremap('a', 'i')
+-- nnoremap('i', 'a')
+-- nnoremap('a', 'i')
 
 -- 'H' and 'L' to go to beginning/end of line
 nnoremap('L', '$')
