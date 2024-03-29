@@ -5,6 +5,9 @@ nnoremap('ø', '')
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
 
+-- Save and Quit
+nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
+
 -- Switch 'j' and 'k'
 nnoremap('j', 'k')
 vnoremap('j', 'k')

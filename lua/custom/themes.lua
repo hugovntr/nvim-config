@@ -10,9 +10,9 @@ return {
       require('themery').setup(opts)
       -- Themery block
       -- This block will be replaced by Themery.
+      vim.o.termguicolors = true
       vim.cmd 'colorscheme catppuccin-mocha'
       vim.g.theme_id = 4
-      vim.o.termguicolors = true
       -- end themery block
 
       vim.keymap.set('n', '<leader>ts', '<cmd>Themery<cr>', { noremap = true, desc = '[T]heme [S]witcher' })
