@@ -157,7 +157,7 @@ vim.opt.scrolloff = 10
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-
+vim.opt.termguicolors = true
 vim.opt.hidden = false
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
