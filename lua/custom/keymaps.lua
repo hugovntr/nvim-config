@@ -34,4 +34,5 @@ nnoremap('<leader>q', '<cmd>bd<cr>', { silent = false, desc = 'Close current buf
 
 -- One hand fast travel
 nnoremap('È', '}') -- down
+nnoremap('ø', '{') -- up
 nnoremap('Ï', '{') -- up
