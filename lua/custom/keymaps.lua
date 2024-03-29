@@ -1,6 +1,5 @@
 local nnoremap = require('custom.keymaps_utils').nnoremap
 local vnoremap = require('custom.keymaps_utils').vnoremap
-nnoremap('ø', '')
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
@@ -27,6 +26,10 @@ vnoremap('H', '^')
 -- 'U' to redo
 nnoremap('U', '<C-r>')
 
+-- Delete without copy
+nnoremap('x', '"_x')
+vnoremap('x', '"_x')
+
 -- Open terminal
 nnoremap('', '<cmd>split | terminal<cr>')
 
@@ -39,3 +42,8 @@ nnoremap('<leader>q', '<cmd>bd<cr>', { silent = false, desc = 'Close current buf
 nnoremap('È', '}') -- down
 nnoremap('ø', '{') -- up
 nnoremap('Ï', '{') -- up
+
+-- Split pane
+nnoremap('<leader>wv', '<cmd>vsplit<cr>')
+nnoremap('<leader>wh', '<cmd>split<cr>')
+nnoremap('<leader>wx', '<cmd>q<cr>')
