@@ -26,9 +26,17 @@ vnoremap('H', '^')
 -- 'U' to redo
 nnoremap('U', '<C-r>')
 
+-- Cut using x
+nnoremap('x', 'd')
+vnoremap('x', 'd')
+nnoremap('xx', 'dd')
+vnoremap('xx', 'dd')
+
 -- Delete without copy
-nnoremap('x', '"_x')
-vnoremap('x', '"_x')
+nnoremap('d', '"_d')
+vnoremap('d', '"_d')
+nnoremap('dd', '"_dd')
+vnoremap('dd', '"_dd')
 
 -- Open terminal
 nnoremap('', '<cmd>split | terminal<cr>')
