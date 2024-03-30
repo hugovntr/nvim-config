@@ -1,5 +1,5 @@
 local nnoremap = require('custom.keymaps_utils').nnoremap
-local vnoremap = require('custom.keymaps_utils').vnoremap
+local nvnoremap = require('custom.keymaps_utils').nvnoremap
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
@@ -8,35 +8,24 @@ nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
 nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
 
 -- Switch 'j' and 'k'
-nnoremap('j', 'k')
-vnoremap('j', 'k')
-nnoremap('k', 'j')
-vnoremap('k', 'j')
+nvnoremap('j', 'h')
+nvnoremap('l', 'j')
+nvnoremap('m', 'l')
 
--- Switch 'i' and 'a'
--- nnoremap('i', 'a')
--- nnoremap('a', 'i')
-
--- 'H' and 'L' to go to beginning/end of line
-nnoremap('L', '$')
-nnoremap('H', '^')
-vnoremap('L', '$')
-vnoremap('H', '^')
+-- 'J' and 'M' to go to beginning/end of line
+nvnoremap('M', '$')
+nvnoremap('J', '^')
 
 -- 'U' to redo
 nnoremap('U', '<C-r>')
 
 -- Cut using x
-nnoremap('x', 'd')
-vnoremap('x', 'd')
-nnoremap('xx', 'dd')
-vnoremap('xx', 'dd')
+nvnoremap('x', 'd')
+nvnoremap('xx', 'dd')
 
 -- Delete without copy
-nnoremap('d', '"_d')
-vnoremap('d', '"_d')
-nnoremap('dd', '"_dd')
-vnoremap('dd', '"_dd')
+nvnoremap('d', '"_d')
+nvnoremap('dd', '"_dd')
 
 -- Open terminal
 nnoremap('', '<cmd>split | terminal<cr>')
@@ -47,9 +36,9 @@ nnoremap('<PageDown>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
 nnoremap('<leader>q', '<cmd>bd<cr>', { silent = false, desc = 'Close current buffer' })
 
 -- One hand fast travel
-nnoremap('È', '}') -- down
+nnoremap('¬', '}') -- down (Alt + L)
 nnoremap('ø', '{') -- up
-nnoremap('Ï', '{') -- up
+nnoremap('È', '{') -- up
 
 -- Split pane
 nnoremap('<leader>wv', '<cmd>vsplit<cr>')

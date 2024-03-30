@@ -11,6 +11,7 @@ end
 
 M.map = bind ''
 M.nmap = bind('n', { noremap = true })
+M.nvnoremap = bind { 'n', 'v' }
 M.nnoremap = bind 'n'
 M.vnoremap = bind 'v'
 M.xnoremap = bind 'x'
