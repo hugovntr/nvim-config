@@ -40,32 +40,32 @@ return { -- Autocompletion
     -- See `:help cmp`
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
-    local lspkind = require 'lspkind'
-    local icons = require 'nvim-web-devicons'
     luasnip.config.setup {}
 
     cmp.setup {
+      enabled = true,
       formatting = {
-        fields = { 'kind', 'abbr' },
-        expandable_indicator = true,
-        format = lspkind.cmp_format {
-          mode = 'symbol',
-          maxwidth = 50,
-          show_labelDetails = true,
-          before_each = function(entry, item)
-            local icon, hl_group = icons.get_icon(entry:get_completion_item().label)
-            if icon then
-              item.kind = icon
-              item.kind_hl_group = hl_group
-            end
-          end,
-        },
+        fields = { 'abbr', 'kind', 'menu' },
+        expandable_indicator = false,
+        format = function(entry, vim_item)
+          local kind = require('lspkind').cmp_format { mode = 'symbol_text', maxwidth = 50 }(entry, vim_item)
+          local strings = vim.split(kind.kind, '%s', { trimempty = true })
+          kind.kind = ' ' .. (strings[1] or '') .. ' '
+          kind.menu = ' ' .. (strings[2] or '') .. ''
+
+          return kind
+        end,
       },
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
         end,
       },
+      window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      },
+      experimental = { ghost_text = true },
       completion = { completeopt = 'menu,menuone,noinsert' },
 
       -- For an understanding of why these mappings were

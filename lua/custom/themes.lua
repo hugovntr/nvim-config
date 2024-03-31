@@ -14,7 +14,6 @@ return {
       vim.cmd 'colorscheme catppuccin-mocha'
       vim.g.theme_id = 4
       -- end themery block
-
       vim.keymap.set('n', '<leader>ts', '<cmd>Themery<cr>', { noremap = true, desc = '[T]heme [S]witcher' })
     end,
   },
@@ -23,7 +22,7 @@ return {
     priority = 1000,
     config = function()
       require('catppuccin').setup {
-        transparent_background = true,
+        transparent_background = false,
         integrations = {
           cmp = true,
           telescope = {
@@ -37,6 +36,20 @@ return {
           treesitter = true,
         },
         term_colors = true,
+        custom_highlights = function(colors)
+          return {
+            CmpBorder = { fg = colors.red, bg = colors.green },
+            Pmenu = { bg = colors.surface2 },
+          }
+        end,
+      }
+    end,
+  },
+  {
+    'xiyaowong/transparent.nvim',
+    config = function()
+      require('transparent').setup {
+        enabled = true,
       }
     end,
   },

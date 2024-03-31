@@ -16,11 +16,12 @@ return {
   config = function()
     require('lualine').setup {
       options = {
-        component_separator = '',
+        component_separators = '',
         section_separators = { left = '', right = '' },
+        theme = 'catppuccin',
       },
       sections = {
-        lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+        lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2, icons_enabled = true } },
         lualine_b = { 'filename', 'branch' },
         lualine_c = {
           '%=', --[[ add your center compoentnts here in place of this comment ]]
@@ -39,8 +40,9 @@ return {
         lualine_y = {},
         lualine_z = { 'location' },
       },
-      tabline = {},
-      extensions = {},
+      extensions = {
+        'neo-tree',
+      },
     }
   end,
 }

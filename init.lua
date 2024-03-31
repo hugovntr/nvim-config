@@ -157,6 +157,10 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
 vim.opt.hidden = false
+
+-- Hide the CMD output so that lualine is always at the very bottom
+vim.opt.cmdheight = 0
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
