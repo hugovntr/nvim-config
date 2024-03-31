@@ -13,6 +13,12 @@ return {
       window = {
         position = 'left',
         width = 40,
+        mappings = {
+          ['h'] = 'open_split',
+          ['mv'] = 'move',
+          ['k'] = 'up',
+          ['l'] = 'down',
+        },
       },
       buffers = {
         follow_current_file = {
@@ -25,6 +31,6 @@ return {
         },
       },
     }
-    vim.keymap.set('n', '<C-n>', '<cmd>Neotree position=left toggle<cr>')
+    vim.keymap.set('n', '<M-e>', '<cmd>Neotree position=left toggle<cr>')
   end,
 }

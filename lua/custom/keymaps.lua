@@ -31,8 +31,8 @@ nvnoremap('dd', '"_dd')
 nnoremap('', '<cmd>split | terminal<cr>')
 
 -- Buffer management
-nnoremap('<PageUp>', '<cmd>bprev<cr>', { desc = 'Previous buffer' })
-nnoremap('<PageDown>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
+nnoremap('<C-p>', '<cmd>bprev<cr>', { desc = 'Previous buffer' })
+nnoremap('<C-n>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
 nnoremap('<leader>q', '<cmd>bd<cr>', { silent = false, desc = 'Close current buffer' })
 
 -- One hand fast travel
