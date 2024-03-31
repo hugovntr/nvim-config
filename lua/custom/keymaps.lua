@@ -3,6 +3,8 @@ local nvnoremap = require('custom.keymaps_utils').nvnoremap
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
+-- Save with CMD+S
+nnoremap('<M-s>', '<cmd>w<cr>')
 
 -- Save and Quit
 nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
