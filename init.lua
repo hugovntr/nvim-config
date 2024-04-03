@@ -248,18 +248,6 @@ require('lazy').setup({
   --    require('Comment').setup({})
 
   -- "gc" to comment visual regions/lines
-  {
-    'numToStr/Comment.nvim',
-    opts = {},
-    keys = {
-      { 'gcc', mode = 'n', desc = 'Comment toggle current line' },
-      { 'gc', mode = { 'n', 'o' }, desc = 'Comment toggle linewise' },
-      { 'gc', mode = 'x', desc = 'Comment toggle linewise (visual)' },
-      { 'gbc', mode = 'n', desc = 'Comment toggle current block' },
-      { 'gb', mode = { 'n', 'o' }, desc = 'Comment toggle blockwise' },
-      { 'gb', mode = 'x', desc = 'Comment toggle blockwise (visual)' },
-    },
-  },
 
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:

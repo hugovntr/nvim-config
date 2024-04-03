@@ -5,6 +5,7 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'JoosepAlviste/nvim-ts-context-commentstring',
     },
     opts = {
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'python', 'javascript', 'typescript', 'tsx', 'json', 'dockerfile' },
@@ -12,14 +13,14 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false,
+        -- additional_vim_regex_highlighting = false,
       },
       indent = { enable = true, disable = { 'ruby' } },
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<S-space>',
-          node_incremental = '<S-space>',
+          init_selection = '<C-d>',
+          node_incremental = '<C-d>',
           scope_incremental = false,
           node_decremental = '<bs>',
         },
