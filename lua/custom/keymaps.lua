@@ -1,5 +1,6 @@
 local nnoremap = require('custom.keymaps_utils').nnoremap
 local nvnoremap = require('custom.keymaps_utils').nvnoremap
+local inoremap = require('custom.keymaps_utils').inoremap
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
@@ -46,3 +47,6 @@ nnoremap('È', '{') -- up
 nnoremap('<leader>wv', '<cmd>vsplit<cr>')
 nnoremap('<leader>wh', '<cmd>split<cr>')
 nnoremap('<leader>wx', '<cmd>q<cr>')
+
+-- Insert mode sugar
+inoremap('<M-BS>', '<C-W>', { desc = 'Delete previous word' })
