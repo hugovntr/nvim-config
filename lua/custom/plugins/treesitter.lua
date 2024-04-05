@@ -35,8 +35,8 @@ return {
           keymaps = {
             ['a='] = { query = '@assignment.outer', desc = 'Select outer part of assignment' },
             ['i='] = { query = '@assignment.inner', desc = 'Select inner part of assignment' },
-            ['l='] = { query = '@assignment.lhs', desc = 'Select left part of assignment' },
-            ['r='] = { query = '@assignment.rhs', desc = 'Select right part of assignment' },
+            ['m='] = { query = '@assignment.lhs', desc = 'Select left part of assignment' },
+            ['h='] = { query = '@assignment.rhs', desc = 'Select right part of assignment' },
 
             ['aa'] = { query = '@parameter.outer', desc = 'Select outer part of a parameter/argument' },
             ['ia'] = { query = '@parameter.inner', desc = 'Select inner part of a parameter/argument' },

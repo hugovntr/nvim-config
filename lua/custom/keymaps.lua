@@ -4,8 +4,10 @@ local inoremap = require('custom.keymaps_utils').inoremap
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
+
 -- Save with CMD+S
 nnoremap('<M-s>', '<cmd>w<cr>')
+inoremap('<M-s>', '<cmd>w<cr>')
 
 -- Save and Quit
 nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
@@ -50,3 +52,7 @@ nnoremap('<leader>wx', '<cmd>q<cr>')
 
 -- Insert mode sugar
 inoremap('<M-BS>', '<C-W>', { desc = 'Delete previous word' })
+
+-- Move lines
+nnoremap('<M-k>', '<cmd>m .-2<cr>', { desc = 'Move line up (1)' })
+nnoremap('<M-l>', '<cmd>m .+1<cr>', { desc = 'Move line down (1)' })
