@@ -12,7 +12,7 @@ return {
       enable_diagnostics = true,
       window = {
         position = 'left',
-        width = 40,
+        width = 32,
         mappings = {
           ['h'] = 'open_split',
           ['mv'] = 'move',
@@ -28,6 +28,10 @@ return {
       filesystem = {
         follow_current_file = {
           enabled = true,
+        },
+        filtered_items = {
+          hide_gitignored = false,
+          hide_dotfiles = false,
         },
       },
     }

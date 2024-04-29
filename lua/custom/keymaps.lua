@@ -1,13 +1,16 @@
 local nnoremap = require('custom.keymaps_utils').nnoremap
 local nvnoremap = require('custom.keymaps_utils').nvnoremap
 local inoremap = require('custom.keymaps_utils').inoremap
+local ninoremap = require('custom.keymaps_utils').ninoremap
 
 -- Save with leader
 nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
 
 -- Save with CMD+S
-nnoremap('<M-s>', '<cmd>w<cr>')
-inoremap('<M-s>', '<cmd>w<cr>')
+ninoremap('<M-s>', '<cmd>w<cr><esc><esc>')
+
+-- Exit insert mode with jk
+inoremap('jk', '<esc><esc>')
 
 -- Save and Quit
 nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
@@ -16,10 +19,6 @@ nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
 nvnoremap('j', 'h')
 nvnoremap('l', 'j')
 nvnoremap('m', 'l')
-
--- 'J' and 'M' to go to beginning/end of line
-nvnoremap('M', '$')
-nvnoremap('J', '^')
 
 -- 'U' to redo
 nnoremap('U', '<C-r>')

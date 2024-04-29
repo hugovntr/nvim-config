@@ -20,6 +20,14 @@ return {
         section_separators = { left = '', right = '' },
         theme = 'catppuccin',
       },
+      tabline = {
+        lualine_a = { 'buffers' },
+        lualine_b = { 'diagnostics' },
+        lualine_c = { 'diff' },
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {},
+      },
       sections = {
         lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2, icons_enabled = true } },
         lualine_b = { 'filename', 'branch' },
