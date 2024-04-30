@@ -11,6 +11,7 @@ ninoremap('<M-s>', '<cmd>w<cr><esc><esc>')
 
 -- Exit insert mode with jk
 inoremap('jk', '<esc><esc>')
+inoremap('kl', '<esc><esc>')
 
 -- Save and Quit
 nnoremap('<leader>sq', '<cmd>wqa<cr>', { silent = true })
