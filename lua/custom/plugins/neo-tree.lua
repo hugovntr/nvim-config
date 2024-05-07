@@ -11,7 +11,7 @@ return {
       enable_git_status = true,
       enable_diagnostics = true,
       window = {
-        position = 'left',
+        position = 'float',
         width = 32,
         mappings = {
           ['h'] = 'open_split',
@@ -35,6 +35,6 @@ return {
         },
       },
     }
-    vim.keymap.set('n', '<M-e>', '<cmd>Neotree position=left toggle<cr>')
+    vim.keymap.set('n', '<M-e>', '<cmd>Neotree toggle<cr>')
   end,
 }

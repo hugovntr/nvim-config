@@ -2,7 +2,7 @@ return {
   {
     'zaldih/themery.nvim',
     opts = {
-      themes = { 'tokyonight-night', 'tokyonight-storm', 'tokyonight-day', 'catppuccin-mocha', 'catppuccin-latte' },
+      themes = { 'catppuccin-mocha', 'catppuccin-latte' },
       themeConfigFile = '~/.config/nvim/lua/custom/themes.lua',
       livePreview = true,
     },
@@ -22,9 +22,10 @@ return {
     priority = 1000,
     config = function()
       require('catppuccin').setup {
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
           cmp = true,
+          fidget = true,
           telescope = {
             enabled = true,
             style = 'nvchad',
@@ -33,15 +34,10 @@ return {
             enabled = true,
           },
           neotree = true,
+          notify = true,
           treesitter = true,
         },
         term_colors = true,
-        custom_highlights = function(colors)
-          return {
-            CmpBorder = { fg = colors.red, bg = colors.green },
-            Pmenu = { bg = colors.surface2 },
-          }
-        end,
       }
     end,
   },
@@ -49,11 +45,8 @@ return {
     'xiyaowong/transparent.nvim',
     config = function()
       require('transparent').setup {
-        enabled = true,
+        enabled = false,
       }
     end,
-  },
-  {
-    'folke/tokyonight.nvim',
   },
 }

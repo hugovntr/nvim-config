@@ -8,7 +8,12 @@ return { -- LSP Configuration & Plugins
 
     -- Useful status updates for LSP.
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    { 'j-hui/fidget.nvim', opts = {} },
+    -- {
+    --   'j-hui/fidget.nvim',
+    --   opts = {
+    --     suppress_on_insert = true,
+    --   },
+    -- },
 
     -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
@@ -155,6 +160,7 @@ return { -- LSP Configuration & Plugins
       -- But for many setups, the LSP (`tsserver`) will work just fine
       tsserver = {},
       tailwindcss = {},
+      ltex = {},
 
       lua_ls = {
         -- cmd = {...},

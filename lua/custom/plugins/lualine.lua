@@ -8,6 +8,21 @@ local colors = {
   grey = '#303030',
 }
 
+local theme = {
+  normal = {
+    a = { fg = 'gray', gui = 'bold' },
+    b = { fg = 'cyan' },
+    c = { fg = 'violet' },
+    d = { fg = 'white' },
+  },
+  insert = {
+    a = { fg = 'LightGreen', gui = 'bold' },
+  },
+  visual = {
+    a = { fg = 'LightMagenta', gui = 'bold' },
+  },
+}
+
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
@@ -17,11 +32,12 @@ return {
     require('lualine').setup {
       options = {
         component_separators = '',
-        section_separators = { left = '', right = '' },
-        theme = 'catppuccin',
+        -- section_separators = { left = '', right = '' },
+        -- theme = 'catppuccin',
+        theme = theme,
       },
       tabline = {
-        lualine_a = { 'buffers' },
+        lualine_a = { { 'buffers', symbols = { alternate_file = '' }, buffers_color = { inactive = 'lualine_a_normal', active = 'lualine_a_insert' } } },
         lualine_b = { 'diagnostics' },
         lualine_c = { 'diff' },
         lualine_x = {},
@@ -29,15 +45,28 @@ return {
         lualine_z = {},
       },
       sections = {
-        lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2, icons_enabled = true } },
-        lualine_b = { 'filename', 'branch' },
-        lualine_c = {
-          '%=', --[[ add your center compoentnts here in place of this comment ]]
+        lualine_a = {
+          {
+            'mode',
+            separator = { --[[ left = '' ]]
+            },
+            right_padding = 2,
+            icons_enabled = true,
+            icon = '󰧚 ',
+          },
         },
+        lualine_b = { 'filename' },
+        lualine_c = { 'branch' },
+        lualine_d = { '%=' },
         lualine_x = {},
         lualine_y = { 'filetype', 'progress' },
         lualine_z = {
-          { 'location', separator = { right = '' }, left_padding = 2 },
+          {
+            'location',
+            separator = { --[[ right = '' ]]
+            },
+            left_padding = 2,
+          },
         },
       },
       inactive_sections = {
