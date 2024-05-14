@@ -1,7 +1,7 @@
-local nnoremap = require('custom.keymaps_utils').nnoremap
-local nvnoremap = require('custom.keymaps_utils').nvnoremap
-local inoremap = require('custom.keymaps_utils').inoremap
-local ninoremap = require('custom.keymaps_utils').ninoremap
+local nnoremap = require('keymaps_utils').nnoremap
+local nvnoremap = require('keymaps_utils').nvnoremap
+local inoremap = require('keymaps_utils').inoremap
+local ninoremap = require('keymaps_utils').ninoremap
 
 -- Clear highlights when pressing <Esc>
 nnoremap('<Esc>', '<cmd>nohlsearch<CR>')

@@ -96,7 +96,7 @@ vim.opt.hlsearch = true
 -- vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Import custom keymaps
-require 'custom.keymaps'
+require 'keymaps'
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -142,8 +142,8 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  { require 'custom.themes' },
-  { import = 'custom.plugins' },
+  { require 'themes' },
+  { import = 'plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
