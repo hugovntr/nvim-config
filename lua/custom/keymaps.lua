@@ -3,8 +3,11 @@ local nvnoremap = require('custom.keymaps_utils').nvnoremap
 local inoremap = require('custom.keymaps_utils').inoremap
 local ninoremap = require('custom.keymaps_utils').ninoremap
 
--- Save with leader
-nnoremap('<leader>s', '<cmd>w<cr>', { silent = false })
+-- Clear highlights when pressing <Esc>
+nnoremap('<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Diagnostics Keymaps
+nnoremap('<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 
 -- Save with CMD+S
 ninoremap('<M-s>', '<cmd>w<cr><esc><esc>')
