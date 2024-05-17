@@ -6,6 +6,9 @@ local ninoremap = require('keymaps_utils').ninoremap
 -- Clear highlights when pressing <Esc>
 nnoremap('<Esc>', '<cmd>nohlsearch<CR>')
 
+-- inlay hints
+nnoremap('<leader>i', vim.lsp.inlay_hint.enable, { desc = 'Show [I]nlay Hints' })
+
 -- Diagnostics Keymaps
 nnoremap('<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 
